@@ -1,8 +1,10 @@
-import React, { startTransition, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './auth.css';
+
 const AuthPage = () => {
   const [activeForm, setActiveForm] = useState('login');
+  const navigate = useNavigate();
 
   const handleSlide = (form) => {
     setActiveForm(form);
@@ -11,6 +13,12 @@ const AuthPage = () => {
   const handleSignupLinkClick = (e) => {
     e.preventDefault();
     setActiveForm('signup');
+  };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    // You can validate the form data here before redirecting
+    navigate('/home');
   };
 
   return (
@@ -34,7 +42,8 @@ const AuthPage = () => {
         </div>
 
         <div className="form-inner" style={{ marginLeft: activeForm === 'signup' ? '-100%' : '0%' }}>
-          <form className="login">
+          {/* Login Form */}
+          <form className="login" onSubmit={handleLoginSubmit}>
             <div className="field">
               <input type="text" placeholder="Email Address" required />
             </div>
@@ -51,6 +60,7 @@ const AuthPage = () => {
             </div>
           </form>
 
+          {/* Signup Form */}
           <form className="signup">
             <div className="field">
               <input type="text" placeholder="Email Address" required />

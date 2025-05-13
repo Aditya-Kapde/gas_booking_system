@@ -1,0 +1,94 @@
+/* src/pages/BookingPage.css */
+.booking-overlay {
+    background-image: url('./book.jpg'); /* Change image path as needed */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  D
+  .booking-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 80px;
+    width: 2.5x; /* not valid */
+    transform: scale(1.25); /* actual way to enlarge */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .option-group {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .option {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: border 0.3s ease;
+  }
+  
+  .option.selected {
+    border: 2px solid #1a75ff;
+  }
+  
+  .option img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .selectors {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .selector img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    padding: 10px;
+    width: 160px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .summary {
+    text-align: center;
+  }
+  
+  .proceed-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #1a75ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .proceed-btn:hover {
+    background-color: #005ce6;
+  }
+  

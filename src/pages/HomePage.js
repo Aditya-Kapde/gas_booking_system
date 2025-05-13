@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './home.css';
 
-const home = () => {
+const HomePage = () => {
   return (
     <div className="homepage-container">
       <div className="card">
@@ -11,7 +12,9 @@ const home = () => {
           <li>Address, date and time</li>
           <li>Payment</li>
         </ul>
-        <button className="card-button">Book Now</button>
+        <Link to="/booking">
+  <button className="card-button">Book Now</button>
+</Link>
       </div>
 
       <div className="card">
@@ -27,4 +30,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default HomePage;

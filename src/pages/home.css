@@ -2,6 +2,10 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    background-image: url('./main_background.avif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .homepage-container {
@@ -11,20 +15,21 @@ body {
     gap: 40px;
     padding: 40px;
     min-height: 100vh;
-    background: linear-gradient(to right, #003366, #0073e6);
     flex-wrap: wrap;
   }
   
   .card {
-    background-color: #fff;
+    background-color: #cbebf5;
     border-radius: 25px;
     padding: 30px 40px;
     width: 300px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
     display: flex;
+    opacity: 0.9; /* Corrected from o.0 */
     flex-direction: column;
     justify-content: space-between;
   }
+  
   
   .card-title {
     font-size: 20px;
