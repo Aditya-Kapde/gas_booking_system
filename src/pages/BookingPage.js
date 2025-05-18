@@ -1,5 +1,6 @@
 // src/pages/BookingPage.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BookingPage.css';
 
 const brands = [
@@ -13,6 +14,7 @@ const weights = [
 ];
 
 const BookingPage = () => {
+  const navigate = useNavigate();
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedWeight, setSelectedWeight] = useState('');
   const [cylinderCount, setCylinderCount] = useState(1);
@@ -41,9 +43,20 @@ const BookingPage = () => {
   };
 
   const handleProceed = () => {
-    alert(
-      `Proceeding with booking for ${cylinderCount} cylinder(s) of ${selectedWeight} from ${selectedBrand}`
-    );
+    if (!selectedBrand || !selectedWeight) {
+      alert('Please select both brand and weight before proceeding');
+      return;
+    }
+
+    const bookingDetails = {
+      brand: selectedBrand,
+      weight: selectedWeight,
+      quantity: cylinderCount,
+      totalPrice: totalPrice
+    };
+
+    // Navigate to address page with booking details
+    navigate('/address', { state: { bookingDetails } });
   };
 
   return (
@@ -87,7 +100,7 @@ const BookingPage = () => {
 
         <div className="summary">
           <p><strong>Total Price:</strong> ₹{totalPrice}</p>
-          <button className="proceed-btn" onClick={handleProceed}>Proceed</button>
+          <button className="proceed-btn" onClick={handleProceed}>Proceed to Address</button>
         </div>
       </div>
     </div>

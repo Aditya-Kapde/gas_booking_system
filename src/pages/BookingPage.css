@@ -1,94 +1,172 @@
 /* src/pages/BookingPage.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .booking-overlay {
-    background-image: url('./book.jpg'); /* Change image path as needed */
-    background-size: cover;
-    background-position: center;
+    background-color: #f5f8ff;
     min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-  }
-  D
-  .booking-box {
-    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.booking-box {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 80px;
-    width: 2.5x; /* not valid */
-    transform: scale(1.25); /* actual way to enlarge */
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  .option-group {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-box h2 {
+    color: #333;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.option-group {
     display: flex;
     justify-content: center;
     gap: 40px;
-  }
-  
-  .option {
+    flex-wrap: wrap;
+}
+
+.option {
     text-align: center;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 10px;
-    transition: border 0.3s ease;
-  }
-  
-  .option.selected {
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.option.selected {
     border: 2px solid #1a75ff;
-  }
-  
-  .option img {
+    background-color: #f8fbff;
+}
+
+.option img {
     width: 100px;
     height: auto;
-  }
-  
-  .selectors {
+    margin-bottom: 10px;
+}
+
+.option p {
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.selectors {
     display: flex;
     gap: 60px;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  
-  .selector {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.selector {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .selector img {
-    width: 60px;
+    min-width: 200px;
+}
+
+.selector label {
     margin-bottom: 10px;
-  }
-  
-  select {
-    padding: 10px;
-    width: 160px;
+    color: #555;
+    font-weight: 500;
+}
+
+select {
+    padding: 12px;
+    width: 100%;
     font-size: 16px;
     border-radius: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .summary {
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select:hover, select:focus {
+    border-color: #1a75ff;
+    outline: none;
+}
+
+.summary {
     text-align: center;
-  }
-  
-  .proceed-btn {
-    padding: 12px 30px;
+    padding: 20px 0;
+}
+
+.summary p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.proceed-btn {
+    padding: 14px 35px;
     font-size: 18px;
     background-color: #1a75ff;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .proceed-btn:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 117, 255, 0.2);
+}
+
+.proceed-btn:hover {
     background-color: #005ce6;
-  }
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(26, 117, 255, 0.3);
+}
+
+.proceed-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .booking-overlay {
+        padding: 10px;
+    }
+
+    .booking-box {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .option-group {
+        gap: 20px;
+    }
+
+    .selectors {
+        gap: 30px;
+    }
+
+    .selector {
+        min-width: 160px;
+    }
+}
   

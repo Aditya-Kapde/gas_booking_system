@@ -13,8 +13,8 @@ const HomePage = () => {
           <li>Payment</li>
         </ul>
         <Link to="/booking">
-  <button className="card-button">Book Now</button>
-</Link>
+          <button className="card-button">Book Now</button>
+        </Link>
       </div>
 
       <div className="card">
@@ -24,7 +24,9 @@ const HomePage = () => {
           <li>See all previous orders</li>
           <li>Register a complaint</li>
         </ul>
-        <button className="card-button">See Details</button>
+        <Link to="/orders">
+          <button className="card-button">See Details</button>
+        </Link>
       </div>
     </div>
   );
