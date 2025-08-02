@@ -1,3 +1,12 @@
+# About our Project
+
+This project is meant to provide a medium to students and also the Institutions to provide the best fitting opportunies to their Educators as well as their students. Basically students would provide feedback of different aspects on this platform and according Educators will be appointed to them.
+
+Educators would also interact with other Educators of similar domain but of other Institutions, which will enhance their effectiveness of teaching and in-turn result in better quality Education for the Students.
+
+Below is the technical aspect of this project.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
